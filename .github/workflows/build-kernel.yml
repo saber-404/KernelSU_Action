@@ -114,10 +114,10 @@ jobs:
             sed -i 's/CONFIG_THINLTO=y/CONFIG_THINLTO=n/' arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
             echo "CONFIG_LTO_NONE=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
         fi
-    - name: Fix YYLTYPE
-      run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        sed -i 's/YYLTYPE yylloc/extern &/' scripts/dtc/dtc-parser.tab.c_shipped
+#     - name: Fix YYLTYPE
+#       run: |
+#         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
+#         sed -i 's/YYLTYPE yylloc/extern &/' scripts/dtc/dtc-parser.tab.c_shipped
     
     - name: Build kernel
       run: |
