@@ -118,7 +118,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         sed -i 's/YYLTYPE yylloc/extern &/' scripts/dtc/dtc-lexer.lex.c_shipped
-        cat scripts/dtc/scripts/dtc/dtc-lexer.lex.c_shipped
+        cat scripts/dtc/dtc-lexer.lex.c_shipped
     
 #     - name: Build kernel
 #       run: |
